@@ -1,4 +1,4 @@
-# Cookie Refresh Exploit
+# Cookie Refresh "Exploit"
 
 For some time now Roblox has had a system that binds a session cookie to an IP address, so when you try to access the 
 webapp via this session on a different IP address, the session is invalidated and you are sent back to the login screen.
